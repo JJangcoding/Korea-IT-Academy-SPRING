@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+	
+	<!-- BoardDaoImp dao = new BoardDAOImp(); -->
+	<bean id="dao" class="dao.BoardDAOImp"/>	
+	
+	<!-- BoardServiceImp serviceBean = new BoardServiceImp(); -->
+	<bean id = "serviceBean" class = "service.BoardServiceImp">
+		<!-- ServiceImp의 생성자 파라미터로 
+		위에서 만들어둔 dao를 보내준다( DI(dependency injection):의존성 주입) -->
+		<constructor-arg ref="dao"/>
+	</bean>
+</beans>
