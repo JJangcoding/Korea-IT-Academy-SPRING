@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- 파일 업로드를 위한 multipartResolver클래스 생성 -->
+	<bean id="multipartResolver" 
+	       class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		
+		<property name="defaultEncoding" value="utf-8"/>
+		
+		<!-- 최대 업로드 용량 ( 1048576byte -> 1mb ) 
+		     104857600 이면 100mb의 최대 업로드 용량이 생성된다 -->
+		<property name="maxUploadSize" value="104857600"/>
+		
+	</bean>
+		
+</beans>

@@ -1,0 +1,47 @@
+@charset "UTF-8";
+*{ margin:0; padding:0; }
+
+#main_box{
+	width:330px;
+	margin:auto;
+}
+
+h1{
+	text-align:center;
+	margin-top:15px;
+	margin-bottom:15px;
+	color:#0080ff;
+	text-shadow:2px 2px 2px black;
+}
+
+.visit_box{
+	margin:0 auto;
+	width:330px;
+	margin-top:30px;
+	box-shadow:2px 2px 2px black;
+	border: 1px solid blue;
+}
+
+.type_content{
+	min-height:100px;
+	height:auto;
+}
+
+.type_name{
+	background:#cfc;
+}
+
+.type_regdate{
+	background:#ccf;
+}
+
+
+
+
+
+
+
+
+
+
+
